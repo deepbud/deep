@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/deep
+
+idspace: DEEP
+base_url: /obo/deep
+
+products:
+- deep.owl: https://raw.githubusercontent.com/deepbud/deep/master/deep.owl
+- deep.obo: https://raw.githubusercontent.com/deepbud/deep/master/deep.obo
+
+term_browser: ontobee
+example_terms:
+- DEEP_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/deepbud/deep/v
+
+- prefix: /tracker/
+  replacement: https://github.com/deepbud/deep/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/DEEP?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/deepbud/deep/master/
